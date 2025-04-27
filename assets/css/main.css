@@ -3407,12 +3407,15 @@ input, select, textarea {
 				text-align: center;
 				width: 2.25em;
 			}
-
+		
 		#banner .inner h1 {
    			 font-size: 4em;
-   		 font-weight: 800;
-   		 letter-spacing: 0.02em;
+   			 font-weight: 800;
+   			 letter-spacing: 0.02em;
+   			 margin-bottom: 0.5em; /* 🛠 add space below your name */
 		}
+
+	
 
 		#banner h2 {
 			-moz-transition: opacity 0.5s ease, -moz-transform 0.5s ease, -moz-filter 0.25s ease;
