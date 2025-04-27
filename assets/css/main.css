@@ -3408,6 +3408,12 @@ input, select, textarea {
 				width: 2.25em;
 			}
 
+		#banner .inner h1 {
+   			 font-size: 4em;
+   		 font-weight: 800;
+   		 letter-spacing: 0.02em;
+		}
+
 		#banner h2 {
 			-moz-transition: opacity 0.5s ease, -moz-transform 0.5s ease, -moz-filter 0.25s ease;
 			-webkit-transition: opacity 0.5s ease, -webkit-transform 0.5s ease, -webkit-filter 0.25s ease;
