@@ -66,6 +66,32 @@
             font-size: 0.9em;
             color: #555;
         }
+
+        /* Skills Section */
+        #skills {
+            background: white;
+            padding: 4em 2em;
+            text-align: center;
+        }
+        #skills h2 {
+            font-size: 2.5em;
+            margin-bottom: 1em;
+        }
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1.5em;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+        .skill-item {
+            background: #f0f0f0;
+            padding: 1.5em;
+            border-radius: 10px;
+            font-size: 1.1em;
+            font-weight: 600;
+            color: #333;
+        }
     </style>
 </head>
 <body class="is-preload">
@@ -127,6 +153,25 @@
             <p>Summary of project 8 here</p>
         </a>
 
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills">
+        <h2>Skills</h2>
+        <div class="skills-grid">
+            <div class="skill-item">Python</div>
+            <div class="skill-item">Machine Learning</div>
+            <div class="skill-item">Data Analysis</div>
+            <div class="skill-item">SQL</div>
+            <div class="skill-item">TensorFlow / PyTorch</div>
+            <div class="skill-item">Pandas / NumPy</div>
+            <div class="skill-item">Scikit-Learn</div>
+            <div class="skill-item">Natural Language Processing (NLP)</div>
+            <div class="skill-item">Data Visualization (Matplotlib, Seaborn)</div>
+            <div class="skill-item">Cloud: AWS / GCP</div>
+            <div class="skill-item">Git & GitHub</div>
+            <div class="skill-item">Statistics & Experimental Design</div>
+        </div>
     </section>
 
 </div>
