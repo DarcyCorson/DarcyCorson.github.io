@@ -6,121 +6,138 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
     <link rel="stylesheet" href="assets/css/main.css" />
     <noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+    <style>
+        /* Custom Styles for Darcy */
+        #banner {
+            background: linear-gradient(to bottom, #2c3e50, #34495e);
+            padding: 6em 0;
+            text-align: center;
+            color: white;
+        }
+        #banner h1 {
+            font-size: 4em;
+            font-weight: 800;
+            color: #FFD700;
+            margin-bottom: 0.5em;
+        }
+        #banner p {
+            font-size: 1.5em;
+            letter-spacing: 1px;
+            margin: 0.5em 0;
+        }
+        #banner hr {
+            width: 30%;
+            margin: 2em auto;
+            border-top: 2px solid #FFD700;
+        }
+
+        .projects-grid {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 2em;
+            padding: 4em 2em;
+            background: #f7f7f7;
+        }
+        .project-card {
+            background: white;
+            border-radius: 50%;
+            width: 220px;
+            height: 220px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 1em;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+            transition: transform 0.3s;
+            text-decoration: none;
+            color: black;
+        }
+        .project-card:hover {
+            transform: translateY(-10px);
+        }
+        .project-card h3 {
+            margin: 0.5em 0 0.2em 0;
+            font-size: 1.1em;
+        }
+        .project-card p {
+            font-size: 0.9em;
+            color: #555;
+        }
+    </style>
 </head>
 <body class="is-preload">
 
+<!-- Page Wrapper -->
 <div id="page-wrapper">
-
-    <!-- Header -->
-    <header id="header" class="alt">
-        <h1><a href="index.html">Darcy Corson</a></h1>
-        <nav>
-            <a href="#menu">Menu</a>
-        </nav>
-    </header>
-
-    <!-- Menu -->
-    <nav id="menu">
-        <div class="inner">
-            <h2>Menu</h2>
-            <ul class="links">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#footer">Contact</a></li>
-            </ul>
-            <a href="#" class="close">Close</a>
-        </div>
-    </nav>
 
     <!-- Banner -->
     <section id="banner">
         <div class="inner">
-            <h1 style="color: #FFD700;">DARCY CORSON</h1>
-            <p>MASTER OF SCIENCE IN DATA SCIENCE, TUFTS UNIVERSITY</p>
-            <p>BACHELOR OF ARTS IN CHEMISTRY, BOWDOIN COLLEGE</p>
-            <p>DATA SCIENTIST | MACHINE LEARNING ENGINEER | EDUCATOR</p>
+            <h1>Darcy Corson</h1>
+            <p>Master of Science in Data Science, Tufts University</p>
+            <p>Bachelor of Arts in Chemistry, Bowdoin College</p>
+            <hr />
+            <p>Data Scientist &nbsp;|&nbsp; Machine Learning Engineer &nbsp;|&nbsp; Educator</p>
         </div>
     </section>
 
     <!-- Projects Section -->
-    <section id="projects" class="wrapper">
+    <section id="projects" class="projects-grid">
+        
+        <a href="pdfs/project1.pdf" class="project-card">
+            <h3>Project 1</h3>
+            <p>Summary of project 1 here</p>
+        </a>
 
-        <!-- First Row -->
-        <section class="wrapper spotlight style1">
-            <div class="inner">
-                <a href="pdfs/project1.pdf" class="image" target="_blank"><img src="images/project1.jpg" alt="" /></a>
-                <div class="content">
-                    <h2 class="major">Project Title 1</h2>
-                    <p>Short summary of project 1 goes here. A few sentences describing it clearly and concisely.</p>
-                    <a href="pdfs/project1.pdf" class="special" target="_blank">View Paper</a>
-                </div>
-            </div>
-        </section>
+        <a href="pdfs/project2.pdf" class="project-card">
+            <h3>Project 2</h3>
+            <p>Summary of project 2 here</p>
+        </a>
 
-        <section class="wrapper alt spotlight style2">
-            <div class="inner">
-                <a href="pdfs/project2.pdf" class="image" target="_blank"><img src="images/project2.jpg" alt="" /></a>
-                <div class="content">
-                    <h2 class="major">Project Title 2</h2>
-                    <p>Short summary of project 2 goes here. A few sentences describing it clearly and concisely.</p>
-                    <a href="pdfs/project2.pdf" class="special" target="_blank">View Paper</a>
-                </div>
-            </div>
-        </section>
+        <a href="pdfs/project3.pdf" class="project-card">
+            <h3>Project 3</h3>
+            <p>Summary of project 3 here</p>
+        </a>
 
-        <section class="wrapper spotlight style3">
-            <div class="inner">
-                <a href="pdfs/project3.pdf" class="image" target="_blank"><img src="images/project3.jpg" alt="" /></a>
-                <div class="content">
-                    <h2 class="major">Project Title 3</h2>
-                    <p>Short summary of project 3 goes here. A few sentences describing it clearly and concisely.</p>
-                    <a href="pdfs/project3.pdf" class="special" target="_blank">View Paper</a>
-                </div>
-            </div>
-        </section>
+        <a href="pdfs/project4.pdf" class="project-card">
+            <h3>Project 4</h3>
+            <p>Summary of project 4 here</p>
+        </a>
 
-        <section class="wrapper alt spotlight style1">
-            <div class="inner">
-                <a href="pdfs/project4.pdf" class="image" target="_blank"><img src="images/project4.jpg" alt="" /></a>
-                <div class="content">
-                    <h2 class="major">Project Title 4</h2>
-                    <p>Short summary of project 4 goes here. A few sentences describing it clearly and concisely.</p>
-                    <a href="pdfs/project4.pdf" class="special" target="_blank">View Paper</a>
-                </div>
-            </div>
-        </section>
+        <a href="pdfs/project5.pdf" class="project-card">
+            <h3>Project 5</h3>
+            <p>Summary of project 5 here</p>
+        </a>
 
-        <!-- Second Row -->
-        <section class="wrapper spotlight style2">
-            <div class="inner">
-                <a href="pdfs/project5.pdf" class="image" target="_blank"><img src="images/project5.jpg" alt="" /></a>
-                <div class="content">
-                    <h2 class="major">Project Title 5</h2>
-                    <p>Short summary of project 5 goes here. A few sentences describing it clearly and concisely.</p>
-                    <a href="pdfs/project5.pdf" class="special" target="_blank">View Paper</a>
-                </div>
-            </div>
-        </section>
+        <a href="pdfs/project6.pdf" class="project-card">
+            <h3>Project 6</h3>
+            <p>Summary of project 6 here</p>
+        </a>
 
-        <section class="wrapper alt spotlight style3">
-            <div class="inner">
-                <a href="pdfs/project6.pdf" class="image" target="_blank"><img src="images/project6.jpg" alt="" /></a>
-                <div class="content">
-                    <h2 class="major">Project Title 6</h2>
-                    <p>Short summary of project 6 goes here. A few sentences describing it clearly and concisely.</p>
-                    <a href="pdfs/project6.pdf" class="special" target="_blank">View Paper</a>
-                </div>
-            </div>
-        </section>
+        <a href="pdfs/project7.pdf" class="project-card">
+            <h3>Project 7</h3>
+            <p>Summary of project 7 here</p>
+        </a>
 
-        <section class="wrapper spotlight style1">
-            <div class="inner">
-                <a href="pdfs/project7.pdf" class="image" target="_blank"><img src="images/project7.jpg" alt="" /></a>
-                <div class="content">
-                    <h2 class="major">Project Title 7</h2>
-                    <p>Short summary of project 7 goes here. A few sentences describing it clearly and concisely.</p>
-                    <a href="pdfs/project7.pdf" class="special" target="_blank">View Paper</a>
-                </div>
-            </div>
-        </section>
+        <a href="pdfs/project8.pdf" class="project-card">
+            <h3>Project 8</h3>
+            <p>Summary of project 8 here</p>
+        </a>
 
+    </section>
+
+</div>
+
+<!-- Scripts -->
+<script src="assets/js/jquery.min.js"></script>
+<script src="assets/js/jquery.scrollex.min.js"></script>
+<script src="assets/js/browser.min.js"></script>
+<script src="assets/js/breakpoints.min.js"></script>
+<script src="assets/js/util.js"></script>
+<script src="assets/js/main.js"></script>
+
+</body>
+</html>
