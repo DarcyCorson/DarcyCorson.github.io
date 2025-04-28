@@ -39,14 +39,26 @@
     }
     .project {
       display: flex;
-      align-items: center; /* <-- center align vertically */
-      justify-content: space-between;
+      align-items: center;
+      justify-content: center;
       max-width: 1000px;
       width: 100%;
       padding: 0 20px;
+      gap: 50px;
     }
-    .project:nth-child(even) {
-      flex-direction: row-reverse;
+    .project.left .circle {
+      order: 0;
+    }
+    .project.left .project-text {
+      order: 1;
+      text-align: left;
+    }
+    .project.right .circle {
+      order: 1;
+    }
+    .project.right .project-text {
+      order: 0;
+      text-align: right;
     }
     .circle {
       background: #ffd700;
@@ -68,8 +80,7 @@
     }
     .project-text {
       flex: 1;
-      padding: 20px;
-      text-align: left;
+      padding: 10px;
     }
     .project-text h2 {
       margin: 0 0 10px;
@@ -121,7 +132,7 @@
 
 <header>
   <h1>DARCY CORSON</h1>
-  <p>DATA SCIENTIST | MACHINE LEARNING ENGINEER | EDUCATOR</p>
+  <p>Data Scientist | Machine Learning Engineer | Educator</p>
   <hr>
   <p>Master of Science in Data Science, Tufts University</p>
   <p>Bachelor of Arts in Chemistry, Bowdoin College</p>
@@ -129,7 +140,7 @@
 
 <section class="projects">
 
-  <div class="project">
+  <div class="project left">
     <div class="circle" onclick="openModal('pdfs/project1.pdf')">Project 1</div>
     <div class="project-text">
       <h2>Project 1 Title</h2>
@@ -137,7 +148,7 @@
     </div>
   </div>
 
-  <div class="project">
+  <div class="project right">
     <div class="circle" onclick="openModal('pdfs/project2.pdf')">Project 2</div>
     <div class="project-text">
       <h2>Project 2 Title</h2>
@@ -145,7 +156,7 @@
     </div>
   </div>
 
-  <div class="project">
+  <div class="project left">
     <div class="circle" onclick="openModal('pdfs/project3.pdf')">Project 3</div>
     <div class="project-text">
       <h2>Project 3 Title</h2>
@@ -153,7 +164,7 @@
     </div>
   </div>
 
-  <div class="project">
+  <div class="project right">
     <div class="circle" onclick="openModal('pdfs/project4.pdf')">Project 4</div>
     <div class="project-text">
       <h2>Project 4 Title</h2>
@@ -161,7 +172,7 @@
     </div>
   </div>
 
-  <div class="project">
+  <div class="project left">
     <div class="circle" onclick="openModal('pdfs/project5.pdf')">Project 5</div>
     <div class="project-text">
       <h2>Project 5 Title</h2>
@@ -169,7 +180,7 @@
     </div>
   </div>
 
-  <div class="project">
+  <div class="project right">
     <div class="circle" onclick="openModal('pdfs/project6.pdf')">Project 6</div>
     <div class="project-text">
       <h2>Project 6 Title</h2>
@@ -177,7 +188,7 @@
     </div>
   </div>
 
-  <div class="project">
+  <div class="project left">
     <div class="circle" onclick="openModal('pdfs/project7.pdf')">Project 7</div>
     <div class="project-text">
       <h2>Project 7 Title</h2>
@@ -185,7 +196,7 @@
     </div>
   </div>
 
-  <div class="project">
+  <div class="project right">
     <div class="circle" onclick="openModal('pdfs/project8.pdf')">Project 8</div>
     <div class="project-text">
       <h2>Project 8 Title</h2>
