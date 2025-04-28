@@ -47,20 +47,10 @@
       padding: 0 20px;
       gap: 50px;
     }
-    .project.left .circle {
-      order: 0;
-    }
-    .project.left .project-text {
-      order: 1;
-      text-align: left;
-    }
-    .project.right .circle {
-      order: 1;
-    }
-    .project.right .project-text {
-      order: 0;
-      text-align: right;
-    }
+    .project.left .circle { order: 0; }
+    .project.left .project-text { order: 1; text-align: left; }
+    .project.right .circle { order: 1; }
+    .project.right .project-text { order: 0; text-align: right; }
     .circle {
       width: 150px;
       height: 150px;
@@ -80,58 +70,15 @@
       object-fit: cover;
       border-radius: 50%;
     }
-    .circle:hover {
-      transform: scale(1.05);
-    }
-    .project-text {
-      flex: 1;
-      padding: 10px;
-    }
-    .project-text h2 {
-      margin: 0 0 10px;
-      font-size: 1.8em;
-    }
-    .project-text p {
-      margin: 0;
-      font-size: 1.1em;
-    }
-    /* Modal Styles */
-    .modal {
-      display: none;
-      position: fixed;
-      z-index: 999;
-      left: 0; top: 0;
-      width: 100%; height: 100%;
-      overflow: auto;
-      background-color: rgba(0,0,0,0.8);
-      padding-top: 60px;
-    }
-    .modal-content {
-      background-color: #fefefe;
-      margin: auto;
-      padding: 20px;
-      border: 1px solid #888;
-      width: 80%;
-      max-width: 800px;
-      height: 90vh;
-      overflow: auto;
-    }
-    .close {
-      color: #aaa;
-      float: right;
-      font-size: 28px;
-      font-weight: bold;
-      cursor: pointer;
-    }
-    .close:hover {
-      color: black;
-    }
-    iframe {
-      width: 100%;
-      height: 80vh;
-      border: none;
-    }
-    /* Social Icons Section */
+    .circle:hover { transform: scale(1.05); }
+    .project-text { flex: 1; padding: 10px; }
+    .project-text h2 { margin: 0 0 10px; font-size: 1.8em; }
+    .project-text p { margin: 0; font-size: 1.1em; }
+    .modal { display: none; position: fixed; z-index: 999; left: 0; top: 0; width: 100%; height: 100%; overflow: auto; background-color: rgba(0,0,0,0.8); padding-top: 60px; }
+    .modal-content { background-color: #fefefe; margin: auto; padding: 20px; border: 1px solid #888; width: 80%; max-width: 800px; height: 90vh; overflow: auto; }
+    .close { color: #aaa; float: right; font-size: 28px; font-weight: bold; cursor: pointer; }
+    .close:hover { color: black; }
+    iframe { width: 100%; height: 80vh; border: none; }
     .social-icons {
       margin: 60px 0 30px;
       display: flex;
@@ -152,10 +99,7 @@
       justify-content: center;
       transition: background-color 0.3s, color 0.3s;
     }
-    .social-icons a:hover {
-      background-color: #66cc66;
-      color: #2c3440;
-    }
+    .social-icons a:hover { background-color: #66cc66; color: #2c3440; }
   </style>
 </head>
 
@@ -177,7 +121,7 @@
     </div>
     <div class="project-text">
       <h2>Enhancing ML-Based Galactic Photometric Redshift Estimation via Morphological Feature Integration</h2>
-      <p>Developed supervised ML models, including Random Forest Regression and Decision Trees, to improve galactic photometric redshift estimation by integrating morphological and photometric features. Achieved a 6–8% reduction in MAE and 10% improvement in low-redshift galaxy prediction accuracy.</p>
+      <p>Developed supervised machine learning models, including Random Forest Regression and Decision Trees, to improve galactic photometric redshift estimation by integrating morphological and photometric features from large-scale astronomical surveys. Employed Python-based tools (Pandas, NumPy, Scikit-learn, Matplotlib, Seaborn) with K-Fold Cross Validation, hyperparameter tuning, feature importance analysis, and residual diagnostics. Incorporating morphological features reduced mean absolute error (MAE) by 6–8% and increased prediction accuracy by up to 10% for low-redshift galaxies (z &lt; 0.1), demonstrating the effectiveness of combining structural and photometric data for redshift prediction.</p>
     </div>
   </div>
 
@@ -197,7 +141,7 @@
     </div>
     <div class="project-text">
       <h2>Transfer Learning for Adaptive Navigation</h2>
-      <p>Designed and trained a DQN agent using curriculum learning to navigate complex, obstacle-rich grid environments; demonstrated strong generalization and a 97.7% success rate on novel scenarios.</p>
+      <p>Designed and trained a DQN agent using curriculum learning to navigate complex, obstacle-rich grid environments; demonstrated strong generalization and a 97.7% success rate on novel scenarios, outperforming untrained baselines with statistically significant results (p &lt; 0.0001).</p>
     </div>
   </div>
 
@@ -207,7 +151,7 @@
     </div>
     <div class="project-text">
       <h2>Optimal Policy Derivation for Racetrack Completion Using Monte Carlo Control Methods</h2>
-      <p>Developed a reinforcement learning agent using off-policy Monte Carlo control to navigate complex, penalty-based racetracks, optimizing exploration-exploitation balance over 500,000 episodes.</p>
+      <p>Developed and trained a reinforcement learning agent using off-policy Monte Carlo control to navigate a simulated vehicle through complex, penalty-based grid environments; achieved optimal pathfinding by balancing exploration and exploitation over 500,000 training episodes.</p>
     </div>
   </div>
 
@@ -217,7 +161,7 @@
     </div>
     <div class="project-text">
       <h2>Classifying Review Sentiment with Bag-of-Words Features</h2>
-      <p>Built and evaluated MLP, SVM, and logistic regression models on IMDb, Amazon, and Yelp datasets using TF-IDF features; achieved 99.6% training accuracy and 89% AUROC on unseen test data.</p>
+      <p>Built and evaluated MLP, SVM, and logistic regression models for text classification of IMDb, Amazon, and Yelp reviews using TF-IDF features; performed extensive hyperparameter tuning (GridSearchCV), cross-validation, and error analysis to assess model robustness and generalization, achieving 99.6% accuracy on training data and 89% AUROC on unseen data.</p>
     </div>
   </div>
 
@@ -226,8 +170,8 @@
       <img src="images/pic05.jpg" alt="Project 6">
     </div>
     <div class="project-text">
-      <h2>Comparative Analysis of On-Policy and Off-Policy Learning Dynamics</h2>
-      <p>Studied importance sampling vs non-sampling methods in a custom gridworld environment, analyzing convergence speed, efficiency, and proposing extensions for uncertainty modeling.</p>
+      <h2>Comparative Analysis of On-Policy and Off-Policy Learning Dynamics in a Simple Grid World Environment</h2>
+      <p>Designed and executed a reinforcement learning study comparing off-policy algorithms with and without importance sampling in a custom gridworld. Analyzed convergence speed, data efficiency, and stability across learning rates, benchmarking against SARSA. Demonstrated the advantages of importance sampling and proposed extensions to partially observable environments to simulate real-world uncertainty.</p>
     </div>
   </div>
 
@@ -237,7 +181,7 @@
     </div>
     <div class="project-text">
       <h2>Logistic Regression for Digit and Image Classification</h2>
-      <p>Engineered high-accuracy logistic regression models for digit/image recognition, leveraging texture features and segment analysis, achieving 3.75% test error with strong interpretability.</p>
+      <p>Engineered high-accuracy logistic regression models for image classification, leveraging pixel intensity patterns and segment-based texture features to outperform traditional global and width-based approaches. Achieved a 3.75% test error through strategic use of local feature extraction, data augmentation, and rigorous hyperparameter tuning with GridSearchCV. Demonstrated model interpretability through feature visualization and analysis of learned weights.</p>
     </div>
   </div>
 
@@ -246,8 +190,8 @@
       <img src="images/pic07.jpg" alt="Project 8">
     </div>
     <div class="project-text">
-      <h2>Comparative Analysis of RL Strategies in a Non-Stationary Bandit Framework</h2>
-      <p>Analyzed sample average vs. constant step-size methods; demonstrated constant step-size updates outperform in dynamic environments across 2,000 simulation runs.</p>
+      <h2>Comparative Analysis of Reinforcement Learning Strategies: Epsilon-Greedy with Sample Average versus Constant Step-Size in a Non-Stationary, k-Armed Bandit Framework</h2>
+      <p>Conducted a comprehensive analysis of sample-average vs. constant step-size methods in non-stationary reinforcement learning using a 10-armed bandit simulation. Demonstrated that constant step-size updates significantly outperform sample averages in dynamic environments, achieving superior adaptability, learning accuracy, and optimal action selection. Validated findings through statistical testing, convergence plots, and performance metrics across 2000 simulation runs. Extended research to test robustness under varying levels of environmental volatility.</p>
     </div>
   </div>
 
@@ -262,7 +206,6 @@
   <a href="your-resume.pdf" target="_blank"><i class="fas fa-file-alt"></i></a>
 </section>
 
-<!-- Modal -->
 <div id="myModal" class="modal">
   <div class="modal-content">
     <span class="close" onclick="closeModal()">&times;</span>
