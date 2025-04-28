@@ -62,19 +62,23 @@
       text-align: right;
     }
     .circle {
-      background: #ffd700;
-      color: #2c3440;
-      border-radius: 50%;
       width: 150px;
       height: 150px;
+      border-radius: 50%;
+      overflow: hidden;
       display: flex;
       align-items: center;
       justify-content: center;
-      font-weight: bold;
-      font-size: 1.2em;
+      background-color: #ffd700;
       cursor: pointer;
       transition: transform 0.3s;
       flex-shrink: 0;
+    }
+    .circle img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 50%;
     }
     .circle:hover {
       transform: scale(1.05);
@@ -154,6 +158,7 @@
     }
   </style>
 </head>
+
 <body>
 
 <header>
@@ -167,74 +172,49 @@
 <section class="projects">
 
   <div class="project left">
-    <div class="circle" onclick="openModal('pdfs/project1.pdf')">Project 1</div>
+    <div class="circle" onclick="openModal('pdfs/project1.pdf')">
+      <img src="images/project1.png" alt="Project 1">
+    </div>
     <div class="project-text">
-      <h2>Enhancing ML-Based Galactic Photometric Redshift Estimation via Morphological Feature Integration</h2>
-      <p>Developed supervised machine learning models, including Random Forest Regression and Decision Trees, to improve galactic photometric redshift estimation by integrating morphological and photometric features from large-scale astronomical surveys. Employed Python-based tools (Pandas, NumPy, Scikit-learn, Matplotlib, Seaborn) with K-Fold Cross Validation, hyperparameter tuning, feature importance analysis, and residual diagnostics. Incorporating morphological features reduced mean absolute error (MAE) by 6–8% and increased prediction accuracy by up to 10% for low-redshift galaxies (z < 0.1), demonstrating the effectiveness of combining structural and photometric data for redshift prediction.</p>
+      <h2>Enhancing ML-Based Galactic Photometric Redshift Estimation</h2>
+      <p>Reduced mean absolute error by 6–8% and improved redshift accuracy by up to 10% using supervised ML models (Random Forest, Decision Trees) and integrated morphological features from astronomical survey data.</p>
     </div>
   </div>
 
   <div class="project right">
-    <div class="circle" onclick="openModal('pdfs/project2.pdf')">Project 2</div>
+    <div class="circle" onclick="openModal('pdfs/project2.pdf')">
+      <img src="images/pic01.jpg" alt="Project 2">
+    </div>
     <div class="project-text">
       <h2>Dynamic HTS Data Analytics for Accelerated Drug Discovery</h2>
-      <p>Proposed custom algorithms and real-time analytics to enhance HTS data processing, accelerating drug discovery through machine learning and big data technologies.</p>
+      <p>Proposed custom real-time analytics pipelines to accelerate drug discovery by improving HTS data workflows with machine learning and big data techniques.</p>
     </div>
   </div>
 
   <div class="project left">
-    <div class="circle" onclick="openModal('pdfs/project1.pdf')">Project 3</div>
+    <div class="circle" onclick="openModal('pdfs/project3.pdf')">
+      <img src="images/pic02.jpg" alt="Project 3">
+    </div>
     <div class="project-text">
       <h2>Transfer Learning for Adaptive Navigation</h2>
-      <p>Designed and trained a DQN agent using curriculum learning to navigate complex, obstacle-rich grid environments; demonstrated strong generalization and a 97.7% success rate on novel scenarios, outperforming untrained baselines with statistically significant results (p < 0.0001).</p>
+      <p>Designed a DQN agent with curriculum learning to achieve 97.7% success rate navigating unseen grid worlds, outperforming baselines with strong generalization.</p>
     </div>
   </div>
 
   <div class="project right">
-    <div class="circle" onclick="openModal('pdfs/project2.pdf')">Project 4</div>
+    <div class="circle" onclick="openModal('pdfs/project4.pdf')">
+      <img src="images/pic03.jpg" alt="Project 4">
+    </div>
     <div class="project-text">
-      <h2>Optimal Policy Derivation for Racetrack Completion Using Monte Carlo Control Methods</h2>
-      <p>Developed and trained a reinforcement learning agent using off-policy Monte Carlo control to navigate a simulated vehicle through complex, penalty-based grid environments; achieved optimal pathfinding by balancing exploration and exploitation over 500,000 training episodes.</p>
+      <h2>Optimal Policy Derivation Using Monte Carlo Methods</h2>
+      <p>Developed off-policy reinforcement learning agent for racetrack navigation tasks, achieving optimal pathfinding through extensive episodic training.</p>
     </div>
   </div>
 
-  <div class="project left">
-    <div class="circle" onclick="openModal('pdfs/project1.pdf')">Project 5</div>
-    <div class="project-text">
-      <h2>Classifying Review Sentiment with Bag-of-Words Features</h2>
-      <p>Built and evaluated MLP, SVM, and logistic regression models for text classification of IMDb, Amazon, and Yelp reviews using TF-IDF features; performed extensive hyperparameter tuning (GridSearchCV), cross-validation, and error analysis to assess model robustness and generalization, achieving 99.6% accuracy on training data and 89% AUROC on unseen data.</p>
-    </div>
-  </div>
-
-  <div class="project right">
-    <div class="circle" onclick="openModal('pdfs/project2.pdf')">Project 6</div>
-    <div class="project-text">
-      <h2>Comparative Analysis of On-Policy and Off-Policy Learning Dynamics in a Simple Grid World Environment</h2>
-      <p>Designed and executed a reinforcement learning study comparing off-policy algorithms with and without importance sampling in a custom gridworld. Analyzed convergence speed, data efficiency, and stability across learning rates, benchmarking against SARSA. Demonstrated the advantages of importance sampling and proposed extensions to partially observable environments to simulate real-world uncertainty.</p>
-    </div>
-  </div>
-
-  <div class="project left">
-    <div class="circle" onclick="openModal('pdfs/project1.pdf')">Project 7</div>
-    <div class="project-text">
-      <h2>Logistic Regression for Digit and Image Classification</h2>
-      <p>Engineered high-accuracy logistic regression models for image classification, leveraging pixel intensity patterns and segment-based texture features to outperform traditional global and width-based approaches. Achieved a 3.75% test error through strategic use of local feature extraction, data augmentation, and rigorous hyperparameter tuning with GridSearchCV. Demonstrated model interpretability through feature visualization and analysis of learned weights.</p>
-    </div>
-  </div>
-
-  <div class="project right">
-    <div class="circle" onclick="openModal('pdfs/project2.pdf')">Project 8</div>
-    <div class="project-text">
-      <h2>Comparative Analysis of Reinforcement Learning Strategies: Epsilon-Greedy with Sample Average versus Constant Step-Size in a Non-Stationary, k-Armed Bandit Framework</h2>
-      <p>Conducted a comprehensive analysis of sample-average vs. constant step-size methods in non-stationary reinforcement learning using a 10-armed bandit simulation. Demonstrated that constant step-size updates significantly outperform sample averages in dynamic environments, achieving superior adaptability, learning accuracy, and optimal action selection. Validated findings through statistical testing, convergence plots, and performance metrics across 2000 simulation runs. Extended research to test robustness under varying levels of environmental volatility.</p>
-    </div>
-  </div>
-
-  <!-- Continue more projects if needed -->
+  <!-- Add Projects 5-8 similarly -->
 
 </section>
 
-<!-- Social Links Section -->
 <section class="social-icons">
   <a href="https://github.com/" target="_blank"><i class="fab fa-github"></i></a>
   <a href="https://linkedin.com/" target="_blank"><i class="fab fa-linkedin"></i></a>
@@ -267,7 +247,6 @@ window.onclick = function(event) {
   }
 }
 </script>
-
 
 </body>
 </html>
