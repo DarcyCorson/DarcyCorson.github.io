@@ -39,7 +39,8 @@
     }
     .project {
       display: flex;
-      align-items: flex-start;
+      align-items: center; /* <-- center align vertically */
+      justify-content: space-between;
       max-width: 1000px;
       width: 100%;
       padding: 0 20px;
@@ -60,6 +61,7 @@
       font-size: 1.2em;
       cursor: pointer;
       transition: transform 0.3s;
+      flex-shrink: 0;
     }
     .circle:hover {
       transform: scale(1.05);
@@ -67,6 +69,7 @@
     .project-text {
       flex: 1;
       padding: 20px;
+      text-align: left;
     }
     .project-text h2 {
       margin: 0 0 10px;
