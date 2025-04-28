@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <title>Darcy Corson</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
   <style>
     body {
       background: #2c3440;
@@ -126,6 +127,31 @@
       height: 80vh;
       border: none;
     }
+    /* Social Icons Section */
+    .social-icons {
+      margin: 60px 0 30px;
+      display: flex;
+      justify-content: center;
+      gap: 40px;
+      flex-wrap: wrap;
+    }
+    .social-icons a {
+      text-decoration: none;
+      color: #66cc66;
+      font-size: 2em;
+      border: 2px solid #66cc66;
+      border-radius: 50%;
+      width: 80px;
+      height: 80px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: background-color 0.3s, color 0.3s;
+    }
+    .social-icons a:hover {
+      background-color: #66cc66;
+      color: #2c3440;
+    }
   </style>
 </head>
 <body>
@@ -156,54 +182,18 @@
     </div>
   </div>
 
-  <div class="project left">
-    <div class="circle" onclick="openModal('pdfs/project3.pdf')">Project 3</div>
-    <div class="project-text">
-      <h2>Project 3 Title</h2>
-      <p>Brief summary of Project 3 goes here.</p>
-    </div>
-  </div>
+  <!-- Continue more projects if needed -->
 
-  <div class="project right">
-    <div class="circle" onclick="openModal('pdfs/project4.pdf')">Project 4</div>
-    <div class="project-text">
-      <h2>Project 4 Title</h2>
-      <p>Brief summary of Project 4 goes here.</p>
-    </div>
-  </div>
+</section>
 
-  <div class="project left">
-    <div class="circle" onclick="openModal('pdfs/project5.pdf')">Project 5</div>
-    <div class="project-text">
-      <h2>Project 5 Title</h2>
-      <p>Brief summary of Project 5 goes here.</p>
-    </div>
-  </div>
-
-  <div class="project right">
-    <div class="circle" onclick="openModal('pdfs/project6.pdf')">Project 6</div>
-    <div class="project-text">
-      <h2>Project 6 Title</h2>
-      <p>Brief summary of Project 6 goes here.</p>
-    </div>
-  </div>
-
-  <div class="project left">
-    <div class="circle" onclick="openModal('pdfs/project7.pdf')">Project 7</div>
-    <div class="project-text">
-      <h2>Project 7 Title</h2>
-      <p>Brief summary of Project 7 goes here.</p>
-    </div>
-  </div>
-
-  <div class="project right">
-    <div class="circle" onclick="openModal('pdfs/project8.pdf')">Project 8</div>
-    <div class="project-text">
-      <h2>Project 8 Title</h2>
-      <p>Brief summary of Project 8 goes here.</p>
-    </div>
-  </div>
-
+<!-- Social Links Section -->
+<section class="social-icons">
+  <a href="https://github.com/" target="_blank"><i class="fab fa-github"></i></a>
+  <a href="https://linkedin.com/" target="_blank"><i class="fab fa-linkedin"></i></a>
+  <a href="https://instagram.com/" target="_blank"><i class="fab fa-instagram"></i></a>
+  <a href="https://facebook.com/" target="_blank"><i class="fab fa-facebook-f"></i></a>
+  <a href="mailto:your-email@example.com"><i class="fas fa-envelope"></i></a>
+  <a href="your-resume.pdf" target="_blank"><i class="fas fa-file-alt"></i></a>
 </section>
 
 <!-- Modal -->
