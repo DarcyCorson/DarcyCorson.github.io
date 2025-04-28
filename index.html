@@ -6,6 +6,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
   <style>
+    html {
+      scroll-behavior: smooth; /* smooth scrolling when clicking menu links */
+    }
     body {
       background: #2c3440;
       color: white;
@@ -140,11 +143,90 @@
 <section id="projects" style="background: #2c3440; padding: 60px 20px; text-align: center;">
   <h2 style="color: #ffd700; font-size: 2.5em; margin-bottom: 30px;">Projects</h2>
 
-  <div class="projects">
-    <!-- Your project cards (left-right alternated) go here exactly as you already have them -->
-    <!-- No changes inside your project descriptions or images -->
-  </div>
+  <section class="projects">
+
+	<div class="project left">
+		<div class="circle" onclick="openModal('documents/project1.pdf')">
+		<img src="images/project1.png" alt="Project 1">
+		</div>
+		<div class="project-text">
+		<h2>Enhancing ML-Based Galactic Photometric Redshift Estimation via Morphological Feature Integration</h2>
+		<p>Developed supervised machine learning models, including Random Forest Regression and Decision Trees, to improve galactic photometric redshift estimation by integrating morphological and photometric features from large-scale astronomical surveys. Employed Python-based tools (Pandas, NumPy, Scikit-learn, Matplotlib, Seaborn) with K-Fold Cross Validation, hyperparameter tuning, feature importance analysis, and residual diagnostics. Incorporating morphological features reduced mean absolute error (MAE) by 6–8% and increased prediction accuracy by up to 10% for low-redshift galaxies (z &lt; 0.1), demonstrating the effectiveness of combining structural and photometric data for redshift prediction.</p>
+		</div>
+	</div>
+	
+	<div class="project right">
+		<div class="circle" onclick="openModal('documents/project2.pdf')">
+		<img src="images/project2.png" alt="Project 2">
+		</div>
+		<div class="project-text">
+		<h2>Dynamic HTS Data Analytics for Accelerated Drug Discovery</h2>
+		<p>Proposed custom algorithms and real-time analytics to enhance HTS data processing, accelerating drug discovery through machine learning and big data technologies.</p>
+		</div>
+	</div>
+	
+	<div class="project left">
+		<div class="circle" onclick="openModal('documents/project3.pdf')">
+		<img src="images/project3.png" alt="Project 3">
+		</div>
+		<div class="project-text">
+		<h2>Transfer Learning for Adaptive Navigation</h2>
+		<p>Designed and trained a DQN agent using curriculum learning to navigate complex, obstacle-rich grid environments; demonstrated strong generalization and a 97.7% success rate on novel scenarios, outperforming untrained baselines with statistically significant results (p &lt; 0.0001).</p>
+		</div>
+	</div>
+	
+	<div class="project right">
+		<div class="circle" onclick="openModal('documents/project4.pdf')">
+		<img src="images/project4.png" alt="Project 4">
+		</div>
+		<div class="project-text">
+		<h2>Optimal Policy Derivation for Racetrack Completion Using Monte Carlo Control Methods</h2>
+		<p>Developed and trained a reinforcement learning agent using off-policy Monte Carlo control to navigate a simulated vehicle through complex, penalty-based grid environments; achieved optimal pathfinding by balancing exploration and exploitation over 500,000 training episodes.</p>
+		</div>
+	</div>
+	
+	<div class="project left">
+		<div class="circle" onclick="openModal('documents/project5.pdf')">
+		<img src="images/project5.png" alt="Project 5">
+		</div>
+		<div class="project-text">
+		<h2>Classifying Review Sentiment with Bag-of-Words Features</h2>
+		<p>Built and evaluated MLP, SVM, and logistic regression models for text classification of IMDb, Amazon, and Yelp reviews using TF-IDF features; performed extensive hyperparameter tuning (GridSearchCV), cross-validation, and error analysis to assess model robustness and generalization, achieving 99.6% accuracy on training data and 89% AUROC on unseen data.</p>
+		</div>
+	</div>
+	
+	<div class="project right">
+		<div class="circle" onclick="openModal('documents/project6.pdf')">
+		<img src="images/project6.png" alt="Project 6">
+		</div>
+		<div class="project-text">
+		<h2>Comparative Analysis of On-Policy and Off-Policy Learning Dynamics in a Simple Grid World Environment</h2>
+		<p>Designed and executed a reinforcement learning study comparing off-policy algorithms with and without importance sampling in a custom gridworld. Analyzed convergence speed, data efficiency, and stability across learning rates, benchmarking against SARSA. Demonstrated the advantages of importance sampling and proposed extensions to partially observable environments to simulate real-world uncertainty.</p>
+		</div>
+	</div>
+	
+	<div class="project left">
+		<div class="circle" onclick="openModal('documents/project7.pdf')">
+		<img src="images/project7.png" alt="Project 7">
+		</div>
+		<div class="project-text">
+		<h2>Logistic Regression for Digit and Image Classification</h2>
+		<p>Engineered high-accuracy logistic regression models for image classification, leveraging pixel intensity patterns and segment-based texture features to outperform traditional global and width-based approaches. Achieved a 3.75% test error through strategic use of local feature extraction, data augmentation, and rigorous hyperparameter tuning with GridSearchCV. Demonstrated model interpretability through feature visualization and analysis of learned weights.</p>
+		</div>
+	</div>
+	
+	<div class="project right">
+		<div class="circle" onclick="openModal('documents/project8.pdf')">
+		<img src="images/project8b.png" alt="Project 8">
+		</div>
+		<div class="project-text">
+		<h2>Comparative Analysis of Reinforcement Learning Strategies: Epsilon-Greedy with Sample Average versus Constant Step-Size in a Non-Stationary, k-Armed Bandit Framework</h2>
+		<p>Conducted a comprehensive analysis of sample-average vs. constant step-size methods in non-stationary reinforcement learning using a 10-armed bandit simulation. Demonstrated that constant step-size updates significantly outperform sample averages in dynamic environments, achieving superior adaptability, learning accuracy, and optimal action selection. Validated findings through statistical testing, convergence plots, and performance metrics across 2000 simulation runs. Extended research to test robustness under varying levels of environmental volatility.</p>
+		</div>
+	</div>
+	
 </section>
+
 
 <section id="skills" style="background: #2c3440; padding: 60px 20px; text-align: center;">
   <h2 style="color: #ffd700; font-size: 2.5em; margin-bottom: 30px;">Skills</h2>
@@ -159,6 +241,282 @@
 </section>
 
 <section id="contact" class="social-icons">
+  <a href="https://github.com/" target="_blank"><i class="fab fa-github"></i></a>
+  <a href="https://linkedin.com/" target="_blank"><i class="fab fa-linkedin"></i></a>
+  <a href="https://instagram.com/" target="_blank"><i class="fab fa-instagram"></i></a>
+  <a href="https://facebook.com/" target="_blank"><i class="fab fa-facebook-f"></i></a>
+  <a href="mailto:your-email@example.com"><i class="fas fa-envelope"></i></a>
+  <a href="your-resume.pdf" target="_blank"><i class="fas fa-file-alt"></i></a>
+</section>
+
+<div id="myModal" class="modal">
+  <div class="modal-content">
+    <span class="close" onclick="closeModal()">&times;</span>
+    <iframe id="pdfViewer" src=""></iframe>
+  </div>
+</div>
+
+<script>
+function openModal(pdfUrl) {
+  document.getElementById('pdfViewer').src = pdfUrl;
+  document.getElementById('myModal').style.display = "block";
+}
+function closeModal() {
+  document.getElementById('myModal').style.display = "none";
+  document.getElementById('pdfViewer').src = "";
+}
+window.onclick = function(event) {
+  if (event.target == document.getElementById('myModal')) {
+    closeModal();
+  }
+}
+</script>
+
+</body>
+</html>
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Darcy Corson</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+  <style>
+    body {
+      background: #2c3440;
+      color: white;
+      font-family: 'Helvetica Neue', sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+    header {
+      text-align: center;
+      padding: 50px 20px 20px;
+      position: relative;
+    }
+    .menu {
+      position: absolute;
+      top: 20px;
+      right: 30px;
+    }
+    .menu a {
+      margin-left: 20px;
+      color: #ffd700;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 1.1em;
+      transition: color 0.3s;
+    }
+    .menu a:hover {
+      color: #66cc66;
+    }
+    header h1 {
+      font-size: 3em;
+      color: #ffd700;
+      margin-bottom: 10px;
+    }
+    header p {
+      margin: 5px 0;
+      font-size: 1.3em;
+    }
+    hr {
+      width: 200px;
+      border: 1px solid #ffd700;
+      margin: 20px auto;
+    }
+    .projects {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin: 50px 0;
+      gap: 80px;
+    }
+    .project {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      max-width: 1000px;
+      width: 100%;
+      padding: 0 20px;
+      gap: 50px;
+    }
+    .project.left .circle { order: 0; }
+    .project.left .project-text { order: 1; text-align: left; }
+    .project.right .circle { order: 1; }
+    .project.right .project-text { order: 0; text-align: right; }
+
+	.circle {
+	width: 200px;
+	height: 200px;
+	border-radius: 50%;
+	overflow: hidden;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background-color: #ffd700;
+	cursor: pointer;
+	transition: transform 0.3s;
+	flex-shrink: 0;
+	}
+	.circle img {
+	width: 85%;
+	height: 85%;
+	object-fit: contain;
+	border-radius: 50%;
+	}
+
+    .circle:hover { transform: scale(1.05); }
+    .project-text { flex: 1; padding: 10px; }
+    .project-text h2 { margin: 0 0 10px; font-size: 1.8em; }
+    .project-text p { margin: 0; font-size: 1.1em; }
+    .modal { display: none; position: fixed; z-index: 999; left: 0; top: 0; width: 100%; height: 100%; overflow: auto; background-color: rgba(0,0,0,0.8); padding-top: 60px; }
+    .modal-content { background-color: #fefefe; margin: auto; padding: 20px; border: 1px solid #888; width: 80%; max-width: 800px; height: 90vh; overflow: auto; }
+    .close { color: #aaa; float: right; font-size: 28px; font-weight: bold; cursor: pointer; }
+    .close:hover { color: black; }
+    iframe { width: 100%; height: 80vh; border: none; }
+    .social-icons {
+      margin: 60px 0 30px;
+      display: flex;
+      justify-content: center;
+      gap: 40px;
+      flex-wrap: wrap;
+    }
+    .social-icons a {
+      text-decoration: none;
+      color: #66cc66;
+      font-size: 2em;
+      border: 2px solid #66cc66;
+      border-radius: 50%;
+      width: 80px;
+      height: 80px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: background-color 0.3s, color 0.3s;
+    }
+    .social-icons a:hover { background-color: #66cc66; color: #2c3440; }
+  </style>
+</head>
+
+<body>
+
+<header>
+  <div class="menu">
+    <a href="#skills">Skills</a>
+    <a href="#transcript">Transcript</a>
+    <a href="your-resume.pdf" target="_blank">Resume</a>
+    <a href="#contact">Contact</a>
+  </div>
+  <h1>DARCY CORSON</h1>
+  <p>DATA SCIENTIST | ML ENGINEER | EDUCATOR</p>
+  <hr>
+  <p>Master of Science in Data Science, Tufts University</p>
+  <p>Bachelor of Arts in Chemistry, Bowdoin College</p>
+</header>
+
+
+
+
+<section class="projects">
+
+	<div class="project left">
+		<div class="circle" onclick="openModal('documents/project1.pdf')">
+		<img src="images/project1.png" alt="Project 1">
+		</div>
+		<div class="project-text">
+		<h2>Enhancing ML-Based Galactic Photometric Redshift Estimation via Morphological Feature Integration</h2>
+		<p>Developed supervised machine learning models, including Random Forest Regression and Decision Trees, to improve galactic photometric redshift estimation by integrating morphological and photometric features from large-scale astronomical surveys. Employed Python-based tools (Pandas, NumPy, Scikit-learn, Matplotlib, Seaborn) with K-Fold Cross Validation, hyperparameter tuning, feature importance analysis, and residual diagnostics. Incorporating morphological features reduced mean absolute error (MAE) by 6–8% and increased prediction accuracy by up to 10% for low-redshift galaxies (z &lt; 0.1), demonstrating the effectiveness of combining structural and photometric data for redshift prediction.</p>
+		</div>
+	</div>
+	
+	<div class="project right">
+		<div class="circle" onclick="openModal('documents/project2.pdf')">
+		<img src="images/project2.png" alt="Project 2">
+		</div>
+		<div class="project-text">
+		<h2>Dynamic HTS Data Analytics for Accelerated Drug Discovery</h2>
+		<p>Proposed custom algorithms and real-time analytics to enhance HTS data processing, accelerating drug discovery through machine learning and big data technologies.</p>
+		</div>
+	</div>
+	
+	<div class="project left">
+		<div class="circle" onclick="openModal('documents/project3.pdf')">
+		<img src="images/project3.png" alt="Project 3">
+		</div>
+		<div class="project-text">
+		<h2>Transfer Learning for Adaptive Navigation</h2>
+		<p>Designed and trained a DQN agent using curriculum learning to navigate complex, obstacle-rich grid environments; demonstrated strong generalization and a 97.7% success rate on novel scenarios, outperforming untrained baselines with statistically significant results (p &lt; 0.0001).</p>
+		</div>
+	</div>
+	
+	<div class="project right">
+		<div class="circle" onclick="openModal('documents/project4.pdf')">
+		<img src="images/project4.png" alt="Project 4">
+		</div>
+		<div class="project-text">
+		<h2>Optimal Policy Derivation for Racetrack Completion Using Monte Carlo Control Methods</h2>
+		<p>Developed and trained a reinforcement learning agent using off-policy Monte Carlo control to navigate a simulated vehicle through complex, penalty-based grid environments; achieved optimal pathfinding by balancing exploration and exploitation over 500,000 training episodes.</p>
+		</div>
+	</div>
+	
+	<div class="project left">
+		<div class="circle" onclick="openModal('documents/project5.pdf')">
+		<img src="images/project5.png" alt="Project 5">
+		</div>
+		<div class="project-text">
+		<h2>Classifying Review Sentiment with Bag-of-Words Features</h2>
+		<p>Built and evaluated MLP, SVM, and logistic regression models for text classification of IMDb, Amazon, and Yelp reviews using TF-IDF features; performed extensive hyperparameter tuning (GridSearchCV), cross-validation, and error analysis to assess model robustness and generalization, achieving 99.6% accuracy on training data and 89% AUROC on unseen data.</p>
+		</div>
+	</div>
+	
+	<div class="project right">
+		<div class="circle" onclick="openModal('documents/project6.pdf')">
+		<img src="images/project6.png" alt="Project 6">
+		</div>
+		<div class="project-text">
+		<h2>Comparative Analysis of On-Policy and Off-Policy Learning Dynamics in a Simple Grid World Environment</h2>
+		<p>Designed and executed a reinforcement learning study comparing off-policy algorithms with and without importance sampling in a custom gridworld. Analyzed convergence speed, data efficiency, and stability across learning rates, benchmarking against SARSA. Demonstrated the advantages of importance sampling and proposed extensions to partially observable environments to simulate real-world uncertainty.</p>
+		</div>
+	</div>
+	
+	<div class="project left">
+		<div class="circle" onclick="openModal('documents/project7.pdf')">
+		<img src="images/project7.png" alt="Project 7">
+		</div>
+		<div class="project-text">
+		<h2>Logistic Regression for Digit and Image Classification</h2>
+		<p>Engineered high-accuracy logistic regression models for image classification, leveraging pixel intensity patterns and segment-based texture features to outperform traditional global and width-based approaches. Achieved a 3.75% test error through strategic use of local feature extraction, data augmentation, and rigorous hyperparameter tuning with GridSearchCV. Demonstrated model interpretability through feature visualization and analysis of learned weights.</p>
+		</div>
+	</div>
+	
+	<div class="project right">
+		<div class="circle" onclick="openModal('documents/project8.pdf')">
+		<img src="images/project8b.png" alt="Project 8">
+		</div>
+		<div class="project-text">
+		<h2>Comparative Analysis of Reinforcement Learning Strategies: Epsilon-Greedy with Sample Average versus Constant Step-Size in a Non-Stationary, k-Armed Bandit Framework</h2>
+		<p>Conducted a comprehensive analysis of sample-average vs. constant step-size methods in non-stationary reinforcement learning using a 10-armed bandit simulation. Demonstrated that constant step-size updates significantly outperform sample averages in dynamic environments, achieving superior adaptability, learning accuracy, and optimal action selection. Validated findings through statistical testing, convergence plots, and performance metrics across 2000 simulation runs. Extended research to test robustness under varying levels of environmental volatility.</p>
+		</div>
+	</div>
+	
+	</section>
+
+<section id="Skills" style="background: #2c3440; padding: 60px 20px; text-align: center;">
+	<h2 style="color: #ffd700; font-size: 2.5em; margin-bottom: 30px;">TECHNICAL SKILLS</h2>
+	<div style="max-width: 800px; margin: auto; font-size: 1.2em; line-height: 1.8; text-align: left;">
+		<ul style="list-style: none; padding: 0;">
+		<li><strong>Programming Languages:</strong> Python, C++, SQL, Java, MATLAB</li>
+		<li><strong>Tools & Platforms:</strong> Docker, Excel, Git, Google Colab, Jupyter Notebook, LaTeX, VS Code</li>
+		<li><strong>Frameworks & Libraries:</strong> LangChain, LlamaIndex, Matplotlib, NumPy, pandas, PyTorch, scikit-learn, SciPy, Scrapy, Seaborn, Statsmodels, TensorFlow, Transformers, XGBoost</li>
+		<li><strong>Big Data Tools:</strong> Hadoop, Spark</li>
+		</ul>
+	</div>
+</section>
+
+<section class="social-icons">
   <a href="https://github.com/" target="_blank"><i class="fab fa-github"></i></a>
   <a href="https://linkedin.com/" target="_blank"><i class="fab fa-linkedin"></i></a>
   <a href="https://instagram.com/" target="_blank"><i class="fab fa-instagram"></i></a>
