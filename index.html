@@ -1,259 +1,242 @@
-<!DOCTYPE HTML>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>Darcy Corson</title>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-    <link rel="stylesheet" href="assets/css/main.css" />
-    <noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
-
-    <style>
-        /* Banner Styling */
-        #banner {
-            padding: 6em 0 2em 0;
-            text-align: center;
-            background-color: #2c3e50;
-            color: white;
-        }
-
-        #banner h1 {
-            font-size: 3em;
-            font-weight: 900;
-            color: #FFD700;
-            margin-bottom: 0.5em;
-        }
-
-        #banner .tagline {
-            font-size: 1.5em;
-            margin: 0.5em 0;
-            letter-spacing: 0.05em;
-        }
-
-        #banner .divider {
-            width: 100px;
-            height: 3px;
-            background: #FFD700;
-            margin: 1em auto;
-        }
-
-        #banner .degrees {
-            margin-top: 1em;
-            font-size: 1.2em;
-            line-height: 1.5em;
-        }
-
-        /* Spotlight (Project) Styling */
-        .spotlight {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            margin-bottom: 4em;
-        }
-
-        .spotlight.alt {
-            flex-direction: row-reverse;
-        }
-
-        .spotlight .content {
-            flex: 1;
-            padding: 2em;
-        }
-
-        .spotlight .image {
-            flex: 1;
-            text-align: center;
-        }
-
-        .spotlight .image img {
-            max-width: 80%;
-            border-radius: 10px;
-            cursor: pointer;
-            transition: transform 0.3s;
-        }
-
-        .spotlight .image img:hover {
-            transform: scale(1.05);
-        }
-
-        .button {
-            display: inline-block;
-            margin-top: 1em;
-            padding: 0.6em 1.2em;
-            background: #FFD700;
-            color: #2c3e50;
-            text-decoration: none;
-            border-radius: 5px;
-            font-weight: bold;
-            cursor: pointer;
-        }
-
-        /* Skills Styling */
-        #skills .features {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 2em;
-        }
-
-        .major {
-            text-align: center;
-            margin-bottom: 2em;
-            font-size: 2em;
-        }
-
-        /* Modal Styling */
-        .modal {
-            display: none;
-            position: fixed;
-            z-index: 1000;
-            padding-top: 100px;
-            left: 0;
-            top: 0;
-            width: 100%;
-            height: 100%;
-            overflow: auto;
-            background-color: rgba(0,0,0,0.8);
-        }
-
-        .modal-content {
-            background-color: #fefefe;
-            margin: auto;
-            padding: 2em;
-            border: 1px solid #888;
-            width: 80%;
-            max-width: 600px;
-            border-radius: 10px;
-            text-align: center;
-        }
-
-        .close {
-            color: #aaa;
-            float: right;
-            font-size: 28px;
-            font-weight: bold;
-            cursor: pointer;
-        }
-
-        .close:hover {
-            color: #000;
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Darcy Corson Portfolio</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Open Sans', sans-serif;
+      background-color: #2c3440;
+      color: white;
+    }
+    header {
+      text-align: center;
+      padding: 50px 20px 20px;
+    }
+    header h1 {
+      font-size: 60px;
+      color: #ffd93b;
+      margin-bottom: 10px;
+    }
+    header p {
+      margin: 5px;
+      font-size: 22px;
+    }
+    hr {
+      width: 300px;
+      border: 1px solid #ffd93b;
+      margin: 20px auto;
+    }
+    .timeline {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: 90%;
+      margin: 50px auto;
+    }
+    .container {
+      display: flex;
+      width: 100%;
+      justify-content: center;
+      margin: 40px 0;
+      align-items: center;
+    }
+    .container.left {
+      flex-direction: row;
+    }
+    .container.right {
+      flex-direction: row-reverse;
+    }
+    .circle {
+      width: 150px;
+      height: 150px;
+      background-color: #ffd93b;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: bold;
+      font-size: 20px;
+      color: #2c3440;
+      margin: 0 30px;
+      cursor: pointer;
+      transition: transform 0.3s;
+    }
+    .circle:hover {
+      transform: scale(1.05);
+    }
+    .text-box {
+      max-width: 400px;
+    }
+    .text-box h3 {
+      font-size: 26px;
+      margin-bottom: 10px;
+    }
+    .text-box p {
+      font-size: 18px;
+    }
+    /* Modal */
+    .modal {
+      display: none;
+      position: fixed;
+      z-index: 10;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      overflow: auto;
+      background-color: rgba(0, 0, 0, 0.7);
+    }
+    .modal-content {
+      background-color: #fefefe;
+      margin: 10% auto;
+      padding: 20px;
+      border: 1px solid #888;
+      width: 80%;
+      max-width: 600px;
+      text-align: center;
+      color: #2c3440;
+    }
+    .close {
+      color: #aaa;
+      float: right;
+      font-size: 28px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+    .pdf-link {
+      display: inline-block;
+      margin-top: 20px;
+      background-color: #ffd93b;
+      color: #2c3440;
+      padding: 10px 20px;
+      border-radius: 5px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: background-color 0.3s;
+    }
+    .pdf-link:hover {
+      background-color: #e6c531;
+    }
+  </style>
 </head>
+<body>
 
-<body class="is-preload">
+<header>
+  <h1>DARCY CORSON</h1>
+  <p>Data Scientist | Machine Learning Engineer | Educator</p>
+  <hr>
+  <p>Master of Science in Data Science, Tufts University</p>
+  <p>Bachelor of Arts in Chemistry, Bowdoin College</p>
+</header>
 
-<!-- Page Wrapper -->
-<div id="page-wrapper">
+<div class="timeline">
 
-    <!-- Banner -->
-    <section id="banner">
-        <div class="inner">
-            <h1>Darcy Corson</h1>
-            <div class="tagline">Data Scientist | Machine Learning Engineer | Educator</div>
-            <div class="divider"></div>
-            <div class="degrees">
-                <p>Master of Science in Data Science, Tufts University</p>
-                <p>Bachelor of Arts in Chemistry, Bowdoin College</p>
-            </div>
-        </div>
-    </section>
+  <!-- Project 1 -->
+  <div class="container left">
+    <div class="circle" onclick="openModal('modal1')">Project 1</div>
+    <div class="text-box">
+      <h3>Project 1 Title</h3>
+      <p>Brief summary of Project 1 goes here.</p>
+    </div>
+  </div>
 
-    <!-- Projects Section -->
-    <section id="projects" class="wrapper">
-        <div class="inner">
-            <h2 class="major">Projects</h2>
+  <!-- Project 2 -->
+  <div class="container right">
+    <div class="circle" onclick="openModal('modal2')">Project 2</div>
+    <div class="text-box">
+      <h3>Project 2 Title</h3>
+      <p>Brief summary of Project 2 goes here.</p>
+    </div>
+  </div>
 
-            <!-- Project 1 -->
-            <section class="spotlight">
-                <div class="content">
-                    <h3>Project 1 Title</h3>
-                    <p>Brief summary of project 1.</p>
-                    <button class="button" onclick="openModal('modal1')">View More</button>
-                </div>
-                <div class="image">
-                    <img src="images/project1.jpg" alt="Project 1" onclick="openModal('modal1')" />
-                </div>
-            </section>
+  <!-- Project 3 -->
+  <div class="container left">
+    <div class="circle" onclick="openModal('modal3')">Project 3</div>
+    <div class="text-box">
+      <h3>Project 3 Title</h3>
+      <p>Brief summary of Project 3 goes here.</p>
+    </div>
+  </div>
 
-            <!-- Project 2 -->
-            <section class="spotlight alt">
-                <div class="content">
-                    <h3>Project 2 Title</h3>
-                    <p>Brief summary of project 2.</p>
-                    <button class="button" onclick="openModal('modal2')">View More</button>
-                </div>
-                <div class="image">
-                    <img src="images/project2.jpg" alt="Project 2" onclick="openModal('modal2')" />
-                </div>
-            </section>
+  <!-- Project 4 -->
+  <div class="container right">
+    <div class="circle" onclick="openModal('modal4')">Project 4</div>
+    <div class="text-box">
+      <h3>Project 4 Title</h3>
+      <p>Brief summary of Project 4 goes here.</p>
+    </div>
+  </div>
 
-            <!-- Repeat for Projects 3-8 similarly -->
-        </div>
-    </section>
+  <!-- Project 5 -->
+  <div class="container left">
+    <div class="circle" onclick="openModal('modal5')">Project 5</div>
+    <div class="text-box">
+      <h3>Project 5 Title</h3>
+      <p>Brief summary of Project 5 goes here.</p>
+    </div>
+  </div>
 
-    <!-- Skills Section -->
-    <section id="skills" class="wrapper">
-        <div class="inner">
-            <h2 class="major">Skills</h2>
-            <div class="features">
-                <article>
-                    <h3>Programming Languages</h3>
-                    <p>Python, C++, SQL, Java, MATLAB</p>
-                </article>
-                <article>
-                    <h3>Tools & Platforms</h3>
-                    <p>Docker, Excel, Git, Google Colab, Jupyter Notebook, LaTeX, VS Code</p>
-                </article>
-                <article>
-                    <h3>Frameworks & Libraries</h3>
-                    <p>LangChain, LlamaIndex, Matplotlib, NumPy, pandas, PyTorch, scikit-learn, SciPy, Scrapy, Seaborn, Statsmodels, TensorFlow, Transformers, XGBoost</p>
-                </article>
-                <article>
-                    <h3>Big Data Tools</h3>
-                    <p>Hadoop, Spark</p>
-                </article>
-            </div>
-        </div>
-    </section>
+  <!-- Project 6 -->
+  <div class="container right">
+    <div class="circle" onclick="openModal('modal6')">Project 6</div>
+    <div class="text-box">
+      <h3>Project 6 Title</h3>
+      <p>Brief summary of Project 6 goes here.</p>
+    </div>
+  </div>
+
+  <!-- Project 7 -->
+  <div class="container left">
+    <div class="circle" onclick="openModal('modal7')">Project 7</div>
+    <div class="text-box">
+      <h3>Project 7 Title</h3>
+      <p>Brief summary of Project 7 goes here.</p>
+    </div>
+  </div>
+
+  <!-- Project 8 -->
+  <div class="container right">
+    <div class="circle" onclick="openModal('modal8')">Project 8</div>
+    <div class="text-box">
+      <h3>Project 8 Title</h3>
+      <p>Brief summary of Project 8 goes here.</p>
+    </div>
+  </div>
 
 </div>
 
 <!-- Modals -->
 <div id="modal1" class="modal">
-    <div class="modal-content">
-        <span class="close" onclick="closeModal('modal1')">&times;</span>
-        <h2>Project 1 Title</h2>
-        <p>Extended project 1 description goes here.</p>
-        <a href="pdfs/project1.pdf" class="button" target="_blank">Open Full Paper</a>
-    </div>
+  <div class="modal-content">
+    <span class="close" onclick="closeModal('modal1')">&times;</span>
+    <h2>Project 1 Title</h2>
+    <p>More detailed description here...</p>
+    <a href="pdfs/project1.pdf" class="pdf-link" target="_blank">View PDF</a>
+  </div>
 </div>
 
-<div id="modal2" class="modal">
-    <div class="modal-content">
-        <span class="close" onclick="closeModal('modal2')">&times;</span>
-        <h2>Project 2 Title</h2>
-        <p>Extended project 2 description goes here.</p>
-        <a href="pdfs/project2.pdf" class="button" target="_blank">Open Full Paper</a>
-    </div>
-</div>
+<!-- Duplicate modal blocks for project 2 to 8 -->
+<!-- Just replace ID, title, and PDF links accordingly -->
 
-<!-- You can duplicate modals up to modal8 -->
-
-<!-- Scripts -->
 <script>
-    function openModal(id) {
-        document.getElementById(id).style.display = "block";
+function openModal(id) {
+  document.getElementById(id).style.display = 'block';
+}
+function closeModal(id) {
+  document.getElementById(id).style.display = 'none';
+}
+window.onclick = function(event) {
+  document.querySelectorAll('.modal').forEach(function(modal) {
+    if (event.target == modal) {
+      modal.style.display = "none";
     }
-    function closeModal(id) {
-        document.getElementById(id).style.display = "none";
-    }
+  });
+}
 </script>
-
-<script src="assets/js/jquery.min.js"></script>
-<script src="assets/js/jquery.scrollex.min.js"></script>
-<script src="assets/js/browser.min.js"></script>
-<script src="assets/js/breakpoints.min.js"></script>
-<script src="assets/js/util.js"></script>
-<script src="assets/js/main.js"></script>
 
 </body>
 </html>
