@@ -310,8 +310,6 @@ window.onclick = function(event) {
     <p>Site visits: <span id="counter">Loading...</span></p>
     <p>Site visits: <span id="counter">Loading...</span></p>
     <script>
-      const url = 'https://api.countapi.xyz/update/darcycorson.github.io/visits/?amount=1';
-    
       fetch(url)
         .then(res => {
           if (!res.ok) {
