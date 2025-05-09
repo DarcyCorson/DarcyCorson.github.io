@@ -307,23 +307,9 @@ window.onclick = function(event) {
 </body>
 
 <footer>
-  <p>Site visits: <span id="counter">Loading...</span></p>
-  <script>
-    fetch('https://api.countapi.xyz/update/darcycorson.github.io/visits/?amount=1')
-      .then(response => {
-        if (!response.ok) {
-          throw new Error('Network response was not ok');
-        }
-        return response.json();
-      })
-      .then(data => {
-        document.getElementById('counter').innerText = data.value;
-      })
-      .catch(error => {
-        console.error('Fetch error:', error);
-        document.getElementById('counter').innerText = 'Unavailable';
-      });
-  </script>
+  <a href="https://hits.seeyoufarm.com" target="_blank">
+    <img src="https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fdarcycorson.github.io&count_bg=%2379C83D&title_bg=%23555555&icon=github.svg&icon_color=%23ffffff&title=visits&edge_flat=false"/>
+  </a>  
 </footer>
 
 
