@@ -307,25 +307,27 @@ window.onclick = function(event) {
 </body>
 
 <footer>
-    <p>Site visits: <span id="counter">Loading...</span></p>
-    <p>Site visits: <span id="counter">Loading...</span></p>
-    <script>
-      fetch(url)
-        .then(res => {
-          if (!res.ok) {
-            throw new Error(`HTTP error! Status: ${res.status}`);
-          }
-          return res.json();
-        })
-        .then(data => {
-          document.getElementById('counter').innerText = data.value;
-        })
-        .catch(err => {
-          console.error('Failed to load visit count:', err);
-          document.getElementById('counter').innerText = 'Unavailable';
-        });
-    </script>
+  <p>Site visits: <span id="counter">Loading...</span></p>
+  <script>
+    const url = 'https://api.countapi.xyz/update/darcycorson.github.io/visits/?amount=1';
+
+    fetch(url)
+      .then(res => {
+        if (!res.ok) {
+          throw new Error(`HTTP error! Status: ${res.status}`);
+        }
+        return res.json();
+      })
+      .then(data => {
+        document.getElementById('counter').innerText = data.value;
+      })
+      .catch(err => {
+        console.error('Failed to load visit count:', err);
+        document.getElementById('counter').innerText = 'Unavailable';
+      });
+  </script>
 </footer>
+
 
 </html>
 
