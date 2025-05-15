@@ -261,6 +261,27 @@
     </div>
 	</div>
 	
+  <div class="project right">
+    <div class="circle" onclick="openModal('documents/project9a.pdf', 'documents/project9b.pdf'')">
+		<img src="images/project8b.png" alt="Project 9">
+		</div>
+		<div class="project-text">
+		<h2>Distributed Text Mining and Log Analysis with Hadoop Streaming</h2>
+    <p>Leveraged Hadoop streaming to perform large-scale text and log analysis using custom Python mappers and reducers. The first phase involved analyzing Apache server logs to extract the top 5 IPs generating client errors, compute distributions of HTTP request methods, and categorize response status codes into defined classes with percentage breakdowns. Logs were preprocessed, loaded into HDFS, and analyzed via three distinct Hadoop jobs. The second phase focused on sentiment analysis of presidential speeches. After unzipping and extracting .tar.gz speech files, each line was annotated with the corresponding president’s name and uploaded to HDFS. Sentiment valence was computed per president using the AFINN lexicon in a MapReduce workflow, emitting and aggregating word-level sentiment scores across documents. In the third phase, a full TF-IDF pipeline was constructed to rank the most distinctive terms across the ten most recent U.S. presidential inaugural addresses. Texts were cleaned, tokenized, and processed through custom MapReduce stages to calculate term frequencies, document frequencies, and TF-IDF scores. The top 20 ranked terms per speech were extracted to identify semantically significant language. Collectively, this multi-stage project demonstrated scalable natural language processing and log analytics on distributed systems using Hadoop.</p>
+    </div>
+	</div>
+
+  <div class="project right">
+		<div class="circle" onclick="openModal('documents/project10.pdf')">
+		<img src="images/project8b.png" alt="Project 10">
+		</div>
+		<div class="project-text">
+		<h2>Customer Segmentation and POS-Based Text Analysis Using PySpark and NLTK</h2>
+    <p>Used PySpark to engineer a customer segmentation framework based on Recency, Frequency, and Monetary (RFM) metrics, enabling the classification of retail customers into targeted marketing categories such as “Loyal Customers” and “Big Spenders.” Transactions were processed at scale, RFM scores were percentile-ranked, and customers were segmented accordingly for strategic outreach. In a separate text analysis task, employed NLTK and PySpark to process and annotate over 20 Edgar Allan Poe stories. This involved tokenizing text, performing part-of-speech tagging, and compiling results into a structured PySpark DataFrame, facilitating scalable linguistic analysis and further NLP experimentation.</p>
+    </div>
+	</div>
+
+
 </section>
 
 
